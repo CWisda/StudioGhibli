@@ -5,22 +5,30 @@
   text-align: center;
 }
 
-
-h1 {
-  opacity: .25; 
+nav > ul {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
 }
 
-ul > li {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  place-items: center;
-  gap: 1rem;
-  border: 5px solid grey;
-  margin-bottom: .5rem;
-  padding: .5rem;
+.activeLink {
+    color: orange;
 }
 
-ul img {
-  max-width: 100%;
-  height: auto;
+h1:hover {
+    cursor: default;
+    animation: scaleAndColor 1s 1 linear forwards;
+}
+
+@keyframes scaleAndColor {
+    0% {
+        scale: 1;
+    }
+    100% {
+        scale: 1.5;
+        color:rgb(39, 159, 181);
+    }
+
 }
